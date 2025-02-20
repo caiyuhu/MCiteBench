@@ -1,0 +1,5 @@
+{
+    "OPENAI_API_KEY": "YOUR_OPENAI_API_KEY",
+    "VISUAL_RESOURCES_DIR": "visual_resources_example",
+    "INPUT_QUESTION": "data_example"
+}

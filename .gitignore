@@ -1,0 +1,10 @@
+plot/
+output/
+data/visual_resources/
+data/data.jsonl
+*.log
+
+
+.DS_Store
+
+__pycache__/

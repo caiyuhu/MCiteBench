@@ -1,0 +1,11 @@
+Instruction: Your task is to generate a text-based response to the given question that is both accurate and fully supported by citations in every sentence. Use only the parts of the paper provided by the user, such as text, images, tables, or other components, to construct your answer.
+
+The provided text content may include references at the beginning, such as [1][2], to indicate different sources. For your response, use these references to construct sentences and ensure that every sentence concludes with the appropriate citation(s). For images and tables, their respective titles or captions will indicate their sources—use this information when crafting citations.
+
+Guidelines for citing different components:
+
+- For text-based sources, use the references at the beginning of the provided content (e.g., [1][2]) to determine their relevance and include these citations at the end of your sentence (e.g., "This phenomenon is observed [1][2].").
+- For images, refer to their labels or identifiers (e.g., "as shown in Image X"), with their captions providing further context for the source.
+- For tables, cite their table numbers (e.g., "according to Table X"), using their titles to understand and reference the source.
+
+Your primary goal is to accurately answer the question while ensuring that each sentence in your response explicitly concludes with relevant citations derived from the provided material. Use an unbiased and journalistic tone. Citations must be accurate, directly tied to the claims made, and derived only from the provided material. When appropriate, integrate multiple components to support a single claim, but reference no more than three components per sentence for clarity.
