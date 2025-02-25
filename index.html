@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="MCiteBench: A Benchmark for Multimodal Citation Text Generation in MLLMs">
+  <meta property="og:title" content="MCiteBench"/>
+  <meta property="og:description" content="MCiteBench: A Benchmark for Multimodal Citation Text Generation in MLLMs"/>
+
+  <title>MCiteBench</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">MCiteBench: A Benchmark for Multimodal Citation Text Generation in MLLMs</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://github.com/caiyuhu" target="_blank">Caiyu Hu</a><sup style="color:#ed4b82;">1</sup>&emsp;
+                <span class="author-block">
+                  <a href="https://ykzhang721.github.io/" target="_blank">Yikai Zhang</a><sup style="color:#ed4b82;">1</sup>&emsp;
+                  <span class="author-block">
+                    <a href="https://darthzhu.github.io/" target="_blank">Tinghui Zhu</a><sup style="color:#ed4b82;">1</sup>&emsp;
+                  </span>
+                  <span class="author-block">
+                    <a href="https://github.com/YYWSHU" target="_blank"><sup style="color:#ffac33;">2</sup>Yiwei Ye</a>&emsp;
+                  </span>
+                  <span class="author-block">
+                    <a href="http://kw.fudan.edu.cn/people/xiaoyanghua/" target="_blank"><sup style="color:#ed4b82;">1</sup>Yanghua Xiao</a>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">
+                      <sup style="color:#ed4b82;">1</sup>Fudan University&emsp;
+                      <sup style="color:#ffac33;">2</sup>Shanghai University<br>
+                    </span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+                      <!-- ArXiv abstract Link -->
+                    <span class="link-block">
+                      <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/caiyuhu/MCiteBench" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+
+                  <!-- Hugginface Dataset link -->
+                  <span class="link-block">
+                    <a href="https://huggingface.co/datasets/caiyuhu/MCiteBench" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <p style="font-size:18px">🤗</p>
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+                </span>
+
+                
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We introduce MCiteBench, the first benchmark designed to evaluate and analyze the multimodal citation text generation ability of MLLMs. 
+            Our benchmark comprises data derived from academic papers and review-rebuttal interactions, featuring diverse information sources and multimodal content. 
+            We comprehensively evaluate models from multiple dimensions, including citation quality, source reliability, and answer accuracy. 
+            Through extensive experiments, we observe that MLLMs struggle with multimodal citation text generation.
+            We also conduct deep analyses of models' performance, revealing that the bottleneck lies in attributing the correct sources rather than understanding the multimodal content.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Example of Multimodal Citation Text Generation</h2>
+          <img src="static/images/example.png" height="100%"/>
+          <p>
+            The model takes multimodal corpus and generates responses with explicit citations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Dataset</h2>
+        <div class="content has-text-justified">
+          <div class="content has-text-centered">
+          <img src="static/images/data_statistics.png" style="max-height: 50%; max-width: 50%;"/>
+          </div>
+          MCiteBench comprises 3,000 data samples for multimodal citation text generation questions, extracted from 1,749 academic papers with an average of 1.72 questions per paper.
+          Among these, 2,000 are Explanation questions that require detailed evidence analysis and often lead to long-form answers, while 1,000 are Locating questions that focus on direct evidence identification.
+          The evidence is balanced across modalities, with 1,243 textual, 1,474 visual (including 941 figures and 533 tables), and 283 mixed-modality sources, ensuring diverse multimodal attribution scenarios.
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Main Results</h2>
+        <div class="content has-text-justified">
+          <div class="content has-text-centered">
+          <img src="static/images/main_results.png"/>
+          </div>
+<ul>
+<li>Smaller open-source models achieve lower Citation F1 scores and struggle to select evidence that adequately supports their responses.
+Furthermore, they also perform poorly in selecting evidence that directly answers the query, as shown by their low Source F1 and Source Exact Match scores.
+</li>
+<li>As model size increases, we observe an improvement in citation performance, suggesting that scaling model size enhances attribution capability.
+</li>
+<li>
+In comparison, GPT-4o achieves an 84.24% Citation F1 score on single-source Explanation questions, demonstrating strong citation quality. 
+However, it struggles with source reliability, with Source Exact Match scores remaining low at 24.50% for single-source and 21.27% for multi-source settings.
+This indicates that even state-of-the-art models struggle to consistently cite evidence that is directly relevant to answering the query, underscoring the difficulty of precise citation in multimodal contexts.
+</li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">RQ1: Do Models Prefer Specific Modalities for Citation?</h2>
+        <div class="content has-text-justified">
+          <img src="static/images/bar.png" height="100%"/>
+          <p>
+          We analyze model performance in instances where the evidence modality comes from mixed modalities. 
+          Most models achieve high Source EM scores when the ground truth evidence is textual but perform poorly when it is visual.
+          This suggests that although MLLMs can process multimodal inputs, they are better at aligning with textual evidence than accurately citing visual information when generating responses.
+          </p>
+          <img src="static/images/pie.png" height="100%"/>
+          <p>
+          Using Qwen2-VL-7B as the test model, we calculate the attention distribution across multimodal inputs by averaging attention head scores and normalizing by input source token length across different layers.
+          While the model processes all modalities, it prioritizes textual content and utilizes it more effectively than visual data.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">RQ2: How Do Models Allocate Attention When Generating Source Citations?</h2>
+        <div class="content has-text-justified">
+          <div>
+          <img src="static/images/attention_distribution_position.png"/>
+          </div>
+            We analyze the attention distribution of Qwen2-VL-7B when generating source-identifying tokens (e.g., "[1]", "Figure 2").
+            Notably, the distractors are sampled from unrelated papers, meaning they provide no useful information for answering the question.
+            <br>
+            The model’s attention heatmap reveals an intriguing pattern: even when the response is based entirely on a specific piece of evidence, the model’s attention is not solely focused on it.
+            When generating the token after <em>"According to Figure <span style="text-decoration: underline;">&diams;</span>"</em>, the model’s attention remains high on textual index positions (e.g., "[1]", "[2]"), even though the context suggests the model should focus on figure evidence.
+            This suggests that while the model correctly cites the source, it maintains a broader contextual awareness by attending to multiple potential evidence.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">RQ3: Understanding or Attribution: What is the Bottleneck?</h2>
+        <div class="content has-text-justified">
+        <div class="content has-text-centered">
+          <img src="static/images/understaning_attribution.png" style="max-height: 50%; max-width: 70%;"/>
+        </div>
+        On one hand, multimodal understanding requires the model to grasp the meaning of the inputs and use them to generate a coherent response. 
+        On the other hand, multimodal attribution demands that the model's generated response can be traced back to specific, verifiable sources in the input.
+        <br>
+        We constructed single source Locating QA pairs and sampled distractors from unrelated papers.
+        Understanding questions involve a 4-option multiple-choice format, while attribution questions use a 5-option multiple-choice format, with each option corresponding to one of the five information sources in the input.
+        <br>
+        While models achieve over 90% accuracy on understanding tasks, they perform worse on attribution questions.
+        This suggests that the bottleneck lies not in multimodal understanding but in multimodal attribution.
+        This finding underscores a fundamental limitation in current multimodal models: they can process and understand multimodal inputs well but struggle to attribute outputs to the correct evidence accurately. 
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
