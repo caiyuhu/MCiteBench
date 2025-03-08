@@ -38,7 +38,7 @@ conda activate MCiteBench
 pip install -r requirements.txt
 ```
 
-## Runing
+## Running
 
 ### 1. Dataset Download
 
