@@ -228,3 +228,13 @@ After execution, the `MCiteBench/output/citation_f1_source_f1_em/` folder will b
 }
 ```
 
+## Citation Information
+If you find **MCiteBench** useful for your research and applications, please kindly cite using this BibTeX:
+```bib
+@article{hu2025mcitebench,
+  title={MciteBench: A Benchmark for Multimodal Citation Text Generation in MLLMs},
+  author={Hu, Caiyu and Zhang, Yikai and Zhu, Tinghui and Ye, Yiwei and Xiao, Yanghua},
+  journal={arXiv preprint arXiv:2503.02589},
+  year={2025}
+}
+```
