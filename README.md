@@ -1,5 +1,5 @@
 <p align="center">
-  <h1 align="center">MCiteBench: A Benchmark for Multimodal Citation Text Generation in MLLMs</h1>
+  <h1 align="center">MCiteBench: A Multimodal Benchmark for Generating Text with Citations</h1>
   <p align="center">
     <strong>Caiyu Hu</strong>
     ·
@@ -16,10 +16,10 @@
   </div>
 </p>
 
-MCiteBench is a benchmark to evaluate multimodal citation text generation in Multimodal Large Language Models (MLLMs). It includes data from academic papers and review-rebuttal interactions, focusing on citation quality, source reliability, and answer accuracy.
+MCiteBench is a benchmark to evaluate multimodal generating text with citations in Multimodal Large Language Models (MLLMs). It includes data from academic papers and review-rebuttal interactions, focusing on citation quality, source reliability, and answer accuracy.
 MCiteBench consists of 3,000 samples from 1,749 academic papers, featuring 2,000 Explanation tasks and 1,000 Locating tasks, with balanced evidence across text, figures, tables, and mixed modalities.
 
-An example of multimodal citation text generation and data statistics is shown in the figure below:
+An example of multimodal generating text with citations and data statistics is shown in the figure below:
 <div align="center">
   <table style="margin: 0 auto;">
     <tr>
@@ -232,7 +232,7 @@ After execution, the `MCiteBench/output/citation_f1_source_f1_em/` folder will b
 If you find **MCiteBench** useful for your research and applications, please kindly cite using this BibTeX:
 ```bib
 @article{hu2025mcitebench,
-  title={MciteBench: A Benchmark for Multimodal Citation Text Generation in MLLMs},
+  title={MciteBench: A Multimodal Benchmark for Generating Text with Citations},
   author={Hu, Caiyu and Zhang, Yikai and Zhu, Tinghui and Ye, Yiwei and Xiao, Yanghua},
   journal={arXiv preprint arXiv:2503.02589},
   year={2025}
