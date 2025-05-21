@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="MCiteBench: A Benchmark for Multimodal Citation Text Generation in MLLMs">
+  <meta name="description" content="MCiteBench: A Multimodal Benchmark for Generating Text with Citations">
   <meta property="og:title" content="MCiteBench"/>
-  <meta property="og:description" content="MCiteBench: A Benchmark for Multimodal Citation Text Generation in MLLMs"/>
+  <meta property="og:description" content="MCiteBench: A Multimodal Benchmark for Generating Text with Citations"/>
 
   <title>MCiteBench</title>
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
@@ -35,7 +35,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">MCiteBench: A Benchmark for Multimodal Citation Text Generation in MLLMs</h1>
+            <h1 class="title is-1 publication-title">MCiteBench: A Multimodal Benchmark for Generating Text with Citations</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -123,11 +123,10 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We introduce MCiteBench, the first benchmark designed to evaluate and analyze the multimodal citation text generation ability of MLLMs. 
+            In this paper, we introduce MCiteBench, the first benchmark designed to assess the ability of MLLMs to generate text with citations in multimodal contexts.
             Our benchmark comprises data derived from academic papers and review-rebuttal interactions, featuring diverse information sources and multimodal content. 
-            We comprehensively evaluate models from multiple dimensions, including citation quality, source reliability, and answer accuracy. 
-            Through extensive experiments, we observe that MLLMs struggle with multimodal citation text generation.
-            We also conduct deep analyses of models' performance, revealing that the bottleneck lies in attributing the correct sources rather than understanding the multimodal content.
+            Experimental results reveal that MLLMs struggle to ground their outputs reliably when handling multimodal input. 
+            Further analysis uncovers a systematic modality bias and reveals how models internally rely on different sources when generating citations, offering insights into model behavior and guiding future directions for multimodal citation tasks.
           </p>
         </div>
       </div>
@@ -140,7 +139,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Example of Multimodal Citation Text Generation</h2>
+        <h2 class="title is-3">Example of Multimodal Citation Tasks</h2>
           <img src="static/images/example.png" height="100%"/>
           <p>
             The model takes multimodal corpus and generates responses with explicit citations.
@@ -163,8 +162,8 @@
           <div class="content has-text-centered">
           <img src="static/images/data_statistics.png" style="max-height: 50%; max-width: 50%;"/>
           </div>
-          MCiteBench comprises 3,000 data samples for multimodal citation text generation questions, extracted from 1,749 academic papers with an average of 1.72 questions per paper.
-          Among these, 2,000 are Explanation questions that require detailed evidence analysis and often lead to long-form answers, while 1,000 are Locating questions that focus on direct evidence identification.
+          MCiteBench comprises 3,000 data samples for evaluating the ability of MLLMs to generate text with citations, extracted from 1,749 academic papers with an average of 1.72 questions per paper.
+          Among these, 2,000 are Explanation tasks that require detailed evidence analysis and often lead to long-form answers, while 1,000 are Locating tasks that focus on direct evidence identification.
           The evidence is balanced across modalities, with 1,243 textual, 1,474 visual (including 941 figures and 533 tables), and 283 mixed-modality sources, ensuring diverse multimodal attribution scenarios.
         </div>
       </div>
@@ -199,11 +198,41 @@ This indicates that even state-of-the-art models struggle to consistently cite e
   </div>
 </section> 
 
+
 <section class="section hero">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">RQ1: Do Models Prefer Specific Modalities for Citation?</h2>
+        <h2 class="title is-3">RQ1: Can MLLMs Accurately Identify the Source Needed to Answer a Question?</h2>
+        <div class="content has-text-justified">
+          <div class="content has-text-centered">
+          <img src="static/images/multi_choice.png" style="max-height: 50%; max-width: 50%;"/>
+        </div>
+          <p>
+            Generating text with citation can be abstracted into a two-stage process:
+          <ol>
+            <li>
+            generating a response
+            </li>
+            <li>
+            mapping that response to the appropriate supporting input sources by producing attribution tokens such as “[1]” or “Figure 3”.
+            </li>
+          </ol>
+            Instead of requiring the model to generate an answer and then attribute it, we directly evaluate its ability to identify which source would be most helpful in answering a given question. 
+            The model is tasked with selecting which source would be most helpful in answering the question. This task directly evaluates the model’s ability to identify relevant sources based solely on the question, rather than relying on model-generated answers or intermediate claims.
+            Despite this seemingly simplified setting, no model achieves more than 60% accuracy, highlighting the persistent difficulty in accurately grounding questions in the correct source.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">RQ2: Does Modality Influence Citation Performance?</h2>
         <div class="content has-text-justified">
           <img src="static/images/bar.png" height="100%"/>
           <p>
@@ -222,11 +251,11 @@ This indicates that even state-of-the-art models struggle to consistently cite e
   </div>
 </section>
 
-<section class="section hero is-light">
+<section class="section hero">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">RQ2: How Do Models Allocate Attention When Generating Source Citations?</h2>
+        <h2 class="title is-3">RQ3: What Do Models Look At When Generating Citations?</h2>
         <div class="content has-text-justified">
           <div>
           <img src="static/images/attention_distribution_position.png"/>
@@ -235,34 +264,10 @@ This indicates that even state-of-the-art models struggle to consistently cite e
             Notably, the distractors are sampled from unrelated papers, meaning they provide no useful information for answering the question.
             <br>
             The model’s attention heatmap reveals an intriguing pattern: even when the response is based entirely on a specific piece of evidence, the model’s attention is not solely focused on it.
-            When generating the token after <em>"According to Figure <span style="text-decoration: underline;">&diams;</span>"</em>, the model’s attention remains high on textual index positions (e.g., "[1]", "[2]"), even though the context suggests the model should focus on figure evidence.
+            Specifically, we focus on its behavior when predicting the next token after <em>"According to Figure <span style="text-decoration: underline;">&diams;</span>"</em> in its response.
+            The model’s attention remains high on textual index positions (e.g., "[1]", "[2]"), even though the context suggests the model should focus on figure evidence.
             This suggests that while the model correctly cites the source, it maintains a broader contextual awareness by attending to multiple potential evidence.
           </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">RQ3: Understanding or Attribution: What is the Bottleneck?</h2>
-        <div class="content has-text-justified">
-        <div class="content has-text-centered">
-          <img src="static/images/understaning_attribution.png" style="max-height: 50%; max-width: 70%;"/>
-        </div>
-        On one hand, multimodal understanding requires the model to grasp the meaning of the inputs and use them to generate a coherent response. 
-        On the other hand, multimodal attribution demands that the model's generated response can be traced back to specific, verifiable sources in the input.
-        <br>
-        We constructed single source Locating QA pairs and sampled distractors from unrelated papers.
-        Understanding questions involve a 4-option multiple-choice format, while attribution questions use a 5-option multiple-choice format, with each option corresponding to one of the five information sources in the input.
-        <br>
-        While models achieve over 90% accuracy on understanding tasks, they perform worse on attribution questions.
-        This suggests that the bottleneck lies not in multimodal understanding but in multimodal attribution.
-        This finding underscores a fundamental limitation in current multimodal models: they can process and understand multimodal inputs well but struggle to attribute outputs to the correct evidence accurately. 
-
         </div>
       </div>
     </div>
@@ -274,11 +279,11 @@ This indicates that even state-of-the-art models struggle to consistently cite e
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>@article{hu2025mcitebench,
-  title={MciteBench: A Benchmark for Multimodal Citation Text Generation in MLLMs},
-  author={Hu, Caiyu and Zhang, Yikai and Zhu, Tinghui and Ye, Yiwei and Xiao, Yanghua},
-  journal={arXiv preprint arXiv:2503.02589},
-  year={2025}
-}</code></pre>
+        title={MCiteBench: A Benchmark for Multimodal Citation Text Generation in MLLMs},
+        author={Hu, Caiyu and Zhang, Yikai and Zhu, Tinghui and Ye, Yiwei and Xiao, Yanghua},
+        journal={arXiv preprint arXiv:2503.02589},
+        year={2025}
+      }</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
